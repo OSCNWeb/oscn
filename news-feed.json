@@ -1,0 +1,9 @@
+---
+layout: null
+---
+{
+	"news": [
+		{% for item in site.data.decisions-ok %}
+			"item": { "style":{{ item.style }} } {% if forloop.last -eq true %}{% else %},{% endif%}{% endfor %}
+	]
+}
