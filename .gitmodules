@@ -1,0 +1,3 @@
+[submodule "news"]
+	path = news
+	url = https://github.com/OSCNWeb/oscn-news.git
