@@ -1,9 +1,63 @@
 ---
-layout: null
+layout: compress
 ---
+{% assign decision-link = "http://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=" %}
 {
-	"news": [
-		{% for item in site.data.decisions-ok %}
-			"item": { "style":{{ item.style }} } {% if forloop.last -eq true %}{% else %},{% endif%}{% endfor %}
+ "news": [
+{% for item in site.data.decisions.decisions-ok limit: 10 %}
+{ "title": {{ item.style | jsonify }},
+  "type": "decisions-ok",
+  "url": "{{decision-link}}{{ item.citeid }}",
+  "date": "{{ item.decisiondate }}",
+  "expire": "",
+  "excerpt": {{ item.summary | jsonify }},
+  "tags":[]
+},{% endfor %}
+{% for item in site.data.decisions.decisions-ok-cr limit: 10 %}
+{ "title": {{ item.style | jsonify }},
+  "type": "decision-ok-cr",
+  "url": "{{decision-link}}{{ item.citeid }}",
+  "date": "{{ item.decisiondate }}",
+  "expire": "",
+  "excerpt": {{ item.summary | jsonify }},
+  "tags":[]
+},{% endfor %}
+{% for item in site.data.decisions.decisions-ok-civ-app limit: 10 %}
+{ "title": {{ item.style | jsonify }},
+  "type": "decision-civ-app",
+  "url": "{{decision-link}}{{ item.citeid }}",
+  "date": "{{ item.decisiondate }}",
+  "expire": "",
+  "excerpt": {{ item.summary | jsonify }},
+  "tags":[]
+},{% endfor %}
+{% for item in site.categories.careers limit: 10 %}
+{ "title": {{ item.title | jsonify }},
+  "type": "career",
+  "url": "{{ item.url }}",
+  "date": "{{ item.date | date: '%Y%m%d' }}",
+  "expire": "",
+  "excerpt": {{ item.excerpt | jsonify }},
+  "tags":[]
+},{% endfor %}
+{% for item in site.categories.news limit: 10 %}
+{ "title": {{ item.title | jsonify }},
+  "type": "news",
+  "url": "{{ item.url }}",
+  "date": "{{ item.date | date: '%Y%m%d' }}",
+  "expire": "",
+  "excerpt": {{ item.excerpt | jsonify }},
+  "tags":[]
+},{% endfor %}
+{% for item in site.data.events limit: 10 %}
+{ "title": {{ item.title | jsonify }},
+  "type": "event",
+  "url": "{{ item.link }}",
+  "date": "{{ item.created | date: '%Y%m%d' }}",
+  "expire": "",
+  "excerpt": {{ item.location | jsonify }},
+  "tags":[]
+},{% endfor %}
 	]
 }
+

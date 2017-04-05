@@ -1,13 +1,7 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-	{% for d in site.data.files.decisions-ok %}
-		{{ d.citeid }}
-	{% endfor %}
-  <ul class="post-list">
-  </ul>
-</div>
+{%for item in site.pages%}
+<li>{{item.title}}</li>
+{%endfor%}
