@@ -1,1 +1,7 @@
 
+[submodule "news"]
+	path = news
+	url = https://github.com/OSCNWeb/oscn-news.git
+[submodule "careers"]
+	path = careers
+	url = https://github.com/OSCNWeb/oscn-careers.git
