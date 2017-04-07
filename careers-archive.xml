@@ -1,0 +1,5 @@
+---
+---
+<Careers>
+{% for item in site.categories.careers %}{%include careers.xml%}{% endfor %}
+</Careers>

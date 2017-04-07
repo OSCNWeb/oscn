@@ -1,5 +1,5 @@
 ---
 ---
 <News>
-{% for item in site.posts %}{%include xml-post.html%}{% endfor %}
+{% for item in site.categories.news %}{%include news.xml%}{% endfor %}
 </News>
