@@ -1,5 +1,5 @@
 ---
 ---
 <Careers>
-{% for item in site.categories.careers %}{%include careers.xml%}{% endfor %}
+{% for item in site.categories.careers limit:10%}{%include careers.xml%}{% endfor %}
 </Careers>
