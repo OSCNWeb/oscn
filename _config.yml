@@ -26,9 +26,9 @@ defaults:
      path: "news"
      type: "posts"
    values:
-      permalink: "/news/:year-:month-:day/:title/index.html"
+      permalink: "delete.html"
  - scope:
      path: "careers"
      type: "posts"
    values:
-      permalink: "/careers/:year-:month-:day/:title/index.html"
+      permalink: "delete.html"

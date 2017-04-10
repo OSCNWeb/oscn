@@ -1,4 +1,5 @@
 ---
+permalink: Inetpub/Resources/templates/news/news-archive.xml
 ---
 <News>
 {% for item in site.categories.news %}{%include news.xml%}{% endfor %}

@@ -1,0 +1,11 @@
+<Vacancy>
+	<title>{{item.title}}</title>
+    <jobid>{%assign length = item.jobid | size %}{% if length > 8%}{{item.jobid | remove: "-" | remove: " " | remove: ":" | slice: 2,10 }}{%else%}{{item.jobid}}{%endif%}</jobid>
+    <category>{{item.category}}</category>
+    <sub_category>{{item.sub_category}}</sub_category>
+    <location>{{item.location}}</location>
+    <description>{%if item.content contains '<!--more-->'%}{{item.content | split:'<!--more-->' | last | xml_escape}}{%else%}{{item.content | xml_escape}}{%endif%}</description>
+    <publish>{{item.publish | date: "%Y%m%d"}}</publish>
+    <expire>{{item.expire | date: "%Y%m%d"}}</expire>
+	<hrlogic>3</hrlogic>	
+</Vacancy>

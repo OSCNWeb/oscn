@@ -1,4 +1,5 @@
 ---
+permalink: Inetpub/Resources/templates/news/news-current.xml
 ---
 <News>
 {% assign curr_date = site.time | date: "%Y-%m-%d" %}{% for item in site.categories.news %}{% if item.news and item.carousel %}{% if item.expire > curr_date or item.carousel_expire > curr_date or item.expire == nil or item.carousel_expire == nil %}{%include news.xml%}{% endif %}{% elsif item.news %}{% if item.expire > curr_date or item.expire == nil %}{%include news.xml%}{% endif %}{% elsif item.carousel %}{% if item.carousel_expire > curr_date or item.carousel_expire == nil %}{%include news.xml%}{% endif %}{% endif %}{% endfor %}

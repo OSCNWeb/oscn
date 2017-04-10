@@ -1,3 +1,4 @@
 ---
+permalink: Inetpub/Resources/templates/jobs/careers-current.xml
 ---
 <Careers>{% assign curr_date = site.time | date: "%Y-%m-%d" %}{% for item in site.categories.careers %}{% if item.expire == nil or item.expire > curr_date%}{% include careers.xml %}{% endif %}{% endfor %}</Careers>
