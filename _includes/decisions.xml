@@ -1,0 +1,12 @@
+  <Decision>
+    <citeid>{{item.citeid}}</citeid>
+    <style>{{item.style}}</style>
+    <casenumber>{{item.casenumber | xml_escape}}</casenumber>
+    <PdCite>{{item.PdCite}}</PdCite>
+    <WestCite>{{item.WestCite}}</WestCite>
+    <issuedate>{{item.issuedate}}</issuedate>
+    <posteddate>{{item.posteddate}}</posteddate>
+    <decisiondate>{{item.decisiondate}}</decisiondate>
+    <summary>{{item.summary | xml_escape}}</summary>
+    <ReleaseDate>{{item.ReleaseDate}}</ReleaseDate>
+  </Decision>

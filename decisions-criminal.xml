@@ -1,0 +1,6 @@
+---
+permalink: Inetpub/Resources/templates/home/decisions-criminal.xml
+---
+<Decisions>
+{% assign decisions = site.data.decisions | where: "Court", "OK CR" %}{% for item in decisions %}{% include decisions.xml %}{% endfor %}
+</Decisions>
