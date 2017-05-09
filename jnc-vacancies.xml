@@ -1,4 +1,4 @@
 ---
 permalink: Inetpub/Resources/templates/jnc/jnc-vacancies.xml
 ---
-<Vacancies>{% assign curr_date = site.time | date: "%Y-%m-%d" %}{% assign items = site.categories.careers | where: "category","District" | where: "sub_category","JNC" %}{% for item in items %}{% if item.expire == nil or item.expire > curr_date%}{% include vacancies.xml %}{% endif %}{% endfor %}</Vacancies>
+<Vacancies>{% assign curr_date = site.time | date: "%Y-%m-%d" %}{% assign items = site.categories.careers | where: "sub_category","JNC" %}{% for item in items %}{% if item.expire == nil or item.expire > curr_date%}{% include vacancies.xml %}{% endif %}{% endfor %}</Vacancies>
