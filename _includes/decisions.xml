@@ -1,6 +1,6 @@
   <Decision>
     <citeid>{{item.citeid}}</citeid>
-    <style>{{item.style}}</style>
+    <style><![CDATA[{{item.style}}]]></style>
     <casenumber>{{item.casenumber | xml_escape}}</casenumber>
     <PdCite>{{item.PdCite}}</PdCite>
     <WestCite>{{item.WestCite}}</WestCite>
